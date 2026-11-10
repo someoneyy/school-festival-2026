@@ -1,0 +1,1397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1c2842">
+  <meta name="description" content="2026 송호고 동아리 어울림마당 부스 안내: 본관, 신관, 야외 부스를 층별로 검색하고 활동 내용을 살펴보세요.">
+  <title>2026 송호고 동아리 어울림마당 | 부스 안내</title>
+  <style>
+    :root{
+      color-scheme:light;
+      --ink:#202c43;--muted:#667189;--bg:#f7f8fc;--white:#fff;
+      --stroke:#e6e9f1;--navy:#1c2842;--lime:#d8f777;--orange:#ffcf7b;
+      --shadow:0 12px 38px rgba(31,43,77,.075);
+      --radius:24px;
+      font-family:Pretendard,"Apple SD Gothic Neo","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+    button,input,a{font:inherit}
+    button{cursor:pointer}
+    button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #63a6f9;outline-offset:3px}
+    a{color:inherit}
+    .shell{max-width:1232px;margin:0 auto;padding:0 26px}
+    .skip{position:absolute;left:12px;top:-80px;padding:12px;z-index:1000;background:#fff;color:#161d2c;border-radius:12px}.skip:focus{top:12px}
+    header{background:var(--navy);color:white;position:relative;overflow:hidden}
+    header::before{content:"";position:absolute;left:-100px;top:-210px;width:530px;height:530px;border:1px solid #ffffff19;border-radius:50%;pointer-events:none}
+    header::after{content:"";position:absolute;right:-160px;bottom:-310px;width:650px;height:650px;border:1px solid #ffffff17;border-radius:50%;pointer-events:none}
+    .headerbar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:23px;padding-bottom:15px;position:relative;z-index:1}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:850;letter-spacing:-.04em;font-size:15px}
+    .brand-tiles{display:grid;grid-template-columns:repeat(2,13px);gap:3px;transform:rotate(-7deg)}
+    .brand-tiles i{display:block;width:13px;height:13px;border-radius:4px;background:#ffcf7b}.brand-tiles i:nth-child(2){background:#a3d9ff}.brand-tiles i:nth-child(3){background:#d8f777}.brand-tiles i:nth-child(4){background:#ff9b9b}
+    .brand small{display:block;color:#aeb9cf;font-size:10px;font-weight:700;letter-spacing:.14em}
+    .top-link{text-decoration:none;display:inline-flex;align-items:center;gap:7px;background:#ffffff15;border:1px solid #ffffff22;padding:10px 15px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap;transition:background .15s}
+    .top-link:hover{background:#ffffff2c}
+    .hero{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(290px,.85fr);align-items:center;gap:45px;padding-top:48px;padding-bottom:61px}
+    .hero-kicker{display:inline-flex;align-items:center;gap:8px;background:#d8f77724;color:#e6ffab;border:1px solid #d8f77742;border-radius:999px;padding:6px 13px;font-size:12px;font-weight:800;letter-spacing:.035em}
+    .hero h1{font-size:clamp(32px,4.1vw,56px);line-height:1.22;letter-spacing:-.062em;margin:19px 0 12px;font-weight:900}
+    .hero h1 strong{font-weight:900;color:var(--lime)}
+    .hero p{color:#c8d0df;font-size:15px;margin:0;max-width:490px;word-break:keep-all}
+    .search-wrap{margin-top:28px;position:relative;max-width:620px}
+    .search-wrap svg{position:absolute;top:50%;left:20px;transform:translateY(-50%);color:#738095;pointer-events:none}
+    #search{display:block;width:100%;background:white;color:var(--ink);border:0;border-radius:18px;box-shadow:0 18px 32px #101b3060;padding:20px 54px 20px 54px;outline-offset:4px;font-weight:650;font-size:15px}
+    #search::placeholder{color:#98a1b1;font-weight:500}
+    #clearSearch{display:none;position:absolute;right:12px;top:50%;transform:translateY(-50%);border:0;background:#edf0f6;border-radius:50%;width:34px;height:34px;color:#5c6980;font-weight:800}
+    .search-hint{color:#9daec5;font-size:12px;margin-top:10px;padding-left:4px}
+    .hero-visual{position:relative;isolation:isolate}
+    .visual-spark{position:absolute;right:10px;top:-30px;font-size:34px;transform:rotate(12deg)}
+    .overview{background:#ffffff12;border:1px solid #ffffff31;border-radius:27px;padding:18px;backdrop-filter:blur(7px);box-shadow:0 20px 60px #00000020;transform:rotate(2deg)}
+    .overview-top{display:flex;justify-content:space-between;align-items:center;padding:3px 5px 14px;color:#fff;font-weight:850;font-size:13px}
+    .overview-top span:last-child{color:#adc0d7;font-size:11px}
+    .building-stack{display:flex;flex-direction:column;gap:7px}
+    .stack-row{border:1px solid #ffffff36;border-radius:12px;padding:11px 15px;display:flex;justify-content:space-between;align-items:center;background:#eef3ff14;color:#f7f8ff;text-align:left;min-height:45px;transition:transform .15s,background .15s}
+    .stack-row:hover{background:#ffffff33;transform:translateX(-2px)}
+    .stack-row strong{font-size:14px}.stack-row span{font-size:11px;color:#d0d7e6}
+    .stack-row:first-child{background:#dcfa8c;color:#1e3140;border-color:#ecffbd}
+    .stack-row:first-child span{color:#3a553b}
+    .overview-foot{padding:12px 5px 1px;color:#b7c6dc;font-size:11px;text-align:center}
+    .main{margin-top:-17px;position:relative;z-index:2;padding-bottom:35px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .stat{background:white;border:1px solid var(--stroke);border-radius:19px;padding:18px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:13px}
+    .stat-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;font-size:21px;background:#f4f3ff}
+    .stat:nth-child(2) .stat-icon{background:#fff0da}.stat:nth-child(3) .stat-icon{background:#e8f3ff}.stat:nth-child(4) .stat-icon{background:#eff8e2}
+    .stat b{font-size:22px;line-height:1;letter-spacing:-.04em;display:block;font-variant-numeric:tabular-nums}
+    .stat span:last-child{color:var(--muted);font-size:11px;font-weight:700;margin-top:4px;display:block}
+    .filters{padding-top:41px}
+    .section-kicker{font-size:12px;font-weight:850;color:#7b67b2;letter-spacing:.12em;margin-bottom:8px}
+    .filters h2{font-size:clamp(23px,2.5vw,31px);letter-spacing:-.055em;margin:0 0 18px;font-weight:900}
+    .tabbar{display:flex;gap:10px;flex-wrap:wrap}
+    .tab{min-width:150px;flex:1;border:1px solid var(--stroke);border-radius:16px;padding:15px 18px;background:white;text-align:left;display:flex;gap:10px;align-items:center;justify-content:space-between;color:#33435b;font-weight:850;box-shadow:0 4px 15px #222f5210;transition:background .18s, transform .18s, border-color .18s}
+    .tab:hover{transform:translateY(-2px)}
+    .tab[aria-selected="true"]{background:#283955;color:#fff;border-color:#283955;box-shadow:0 10px 24px #29395625}
+    .tab-label{display:flex;align-items:center;gap:9px}.tab-emoji{font-size:20px}
+    .tab .tab-count{font-size:12px;font-weight:850;color:#8793a7;border-radius:10px;padding:3px 8px;background:#f3f5f8}
+    .tab[aria-selected="true"] .tab-count{background:#ffffff22;color:#e7eefb}
+    .tips{margin-top:20px;display:flex;align-items:center;gap:9px;color:#68758b;font-size:12px}
+    .tips::before{content:"ⓘ";color:#50769f;font-weight:800;font-size:17px}
+    .category-row{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:19px 0 9px;scrollbar-width:thin}
+    .category{border:1px solid #e3e7ee;background:#fff;border-radius:999px;padding:9px 15px;white-space:nowrap;font-weight:780;color:#6a778b;font-size:12px;transition:background .15s}
+    .category:hover{background:#edf1f9}.category.active{color:#183023;background:var(--lime);border-color:var(--lime)}
+    .content-top{display:flex;justify-content:space-between;align-items:center;margin:30px 0 18px;gap:12px}
+    .content-top h3{margin:0;font-size:25px;letter-spacing:-.045em;font-weight:900}.content-top p{margin:2px 0 0;color:#8290a2;font-size:14px}
+    .resultcount{color:#60718c;font-size:12px;background:#edf0f6;border-radius:999px;padding:7px 12px;font-weight:850;white-space:nowrap}
+    .floor-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;scrollbar-width:none}
+    .floor-button{border:1px solid #e1e5ee;background:#fff;padding:10px 17px;border-radius:12px;font-weight:850;color:#5d6c83;font-size:13px;transition:all .15s}
+    .floor-button.active{background:#293955;color:white;border-color:#293955;box-shadow:0 7px 15px #25375122}
+    .floor-group{margin:0 0 36px;scroll-margin-top:22px}
+    .floor-heading{display:flex;align-items:center;gap:12px;margin:12px 0 17px;padding-left:2px}
+    .floor-square{width:52px;height:52px;border-radius:15px;background:#e6e9ff;color:#47548c;display:grid;place-items:center;font-size:21px;font-weight:900;letter-spacing:-.08em}
+    .floor-heading h4{margin:0;font-size:22px;letter-spacing:-.04em}.floor-heading p{margin:0;font-size:14px;color:#7c889b}
+    .floor-line{height:1px;background:var(--stroke);flex:1}
+    .booth-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .booth-card{border:1px solid var(--stroke);background:#fff;min-height:238px;padding:23px;text-align:left;display:flex;flex-direction:column;border-radius:23px;box-shadow:0 8px 30px #2d33540b;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;overflow:hidden}
+    .booth-card::before{content:"";height:5px;position:absolute;top:0;left:0;right:0;background:var(--accent,#d6e9f9)}
+    .booth-card:hover{transform:translateY(-3px);box-shadow:0 18px 45px #2d33551a;border-color:#cfdae9}
+    .booth-meta{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .room{font-weight:900;border-radius:9px;background:#eef2f6;padding:6px 11px;color:#35465e;font-size:13px;letter-spacing:-.01em}
+    .type{font-weight:820;color:var(--category-text,#637a8f);font-size:13px;letter-spacing:-.01em}
+    .booth-title{font-size:20px;line-height:1.45;letter-spacing:-.055em;font-weight:900;word-break:keep-all;margin:0 0 5px}
+    .booth-clubs{color:#64718a;font-size:14px;font-weight:750;margin:0 0 10px;word-break:keep-all}
+    .booth-description{color:#53627b;font-size:14px;line-height:1.7;word-break:keep-all;margin:0 0 12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .booth-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;color:#67758c;font-size:12px;font-weight:830}
+    .booth-bottom span:last-child{color:#5671a8;font-size:13px;white-space:nowrap}
+    .floor-note{background:#eaf5ff;border:1px solid #cce7ff;border-radius:16px;margin:0 0 17px;padding:14px 18px;color:#365772;font-size:13px;line-height:1.7}
+    .floor-note strong{color:#1c4c73}
+    .search-group-heading{display:flex;align-items:center;gap:10px;margin:30px 0 15px;color:#283650;font-size:17px;font-weight:900}
+    .search-group-heading span{font-size:11px;background:#eaeef5;color:#6b7b92;border-radius:8px;padding:3px 7px}
+    .empty{background:white;border:1px dashed #ccd5e4;text-align:center;padding:65px 20px;border-radius:24px;color:#708099}
+    .empty strong{display:block;color:#28364d;font-size:19px;margin-bottom:6px}
+    .empty .empty-emoji{display:block;font-size:47px;margin-bottom:10px}
+    .clear-all{margin-top:15px;background:#293955;border:0;color:white;border-radius:12px;padding:11px 18px;font-weight:800}
+    .footer-notice{border-radius:22px;background:#fff8eb;border:1px solid #f0e0be;margin:38px 0 27px;padding:20px 23px;display:flex;gap:15px;align-items:flex-start;color:#756046;font-size:13px;line-height:1.75}
+    .footer-notice .notice-icon{font-size:24px}
+    .footer-notice strong{color:#4d4231}
+    footer{margin-top:5px;background:#e9edf5;padding:30px 0 47px;color:#64738b;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}
+    footer strong{display:block;font-size:15px;color:#314058;margin-bottom:4px}
+    footer p{margin:4px 0 0;max-width:740px;line-height:1.8}
+    footer a{font-weight:850;color:#344d85;text-underline-offset:3px}
+    dialog{border:0;padding:0;background:transparent;max-width:min(570px,calc(100vw - 32px));width:100%;max-height:min(790px,calc(100dvh - 34px));overflow:visible}
+    dialog::backdrop{background:#121b2dc7;backdrop-filter:blur(3px)}
+    .modal-card{background:#fff;border-radius:28px;box-shadow:0 35px 100px #0006;max-height:calc(100dvh - 34px);overflow-y:auto;overscroll-behavior:contain;padding:31px;position:relative}
+    .modal-close{position:absolute;right:21px;top:21px;width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:#edf0f5;color:#617089;border:0;font-size:21px}
+    .modal-location{display:flex;flex-wrap:wrap;gap:8px;padding-right:45px}
+    .modal-chip{display:inline-block;font-size:12px;font-weight:870;border-radius:10px;padding:7px 10px;background:#edf1f6;color:#374761}
+    .modal-chip.primary{background:#dff7a9;color:#304a22}
+    .modal-card h2{font-size:clamp(24px,5.5vw,31px);line-height:1.35;letter-spacing:-.06em;margin:19px 0 8px;word-break:keep-all;font-weight:900}
+    .modal-sub{font-size:14px;color:#62718a;font-weight:800;word-break:keep-all;margin:0 0 20px}
+    .modal-rule{border:0;height:1px;background:#e9edf2;margin:20px 0}
+    .modal-label{font-size:12px;font-weight:900;letter-spacing:.05em;color:#687790;margin:0 0 9px}
+    .modal-description{font-size:15px;line-height:1.85;color:#33425a;word-break:keep-all;margin:0}
+
+    .modal-detail-list{margin:15px 0 0;padding:17px 19px 17px 35px;background:#f7f9fd;border:1px solid #e9edf5;border-radius:16px;color:#34465d;font-size:14px;line-height:1.78;word-break:keep-all}
+    .modal-detail-list li{padding-left:2px;margin:0 0 8px}
+    .modal-detail-list li:last-child{margin-bottom:0}
+    .modal-callout{margin:16px 0 0;background:#eef5ff;border:1px solid #d5e6fb;border-radius:15px;padding:14px 16px;color:#345274;font-size:12px;line-height:1.8}
+    .modal-actions{margin-top:27px;display:flex;gap:10px}
+    .modal-actions button{flex:1;border-radius:14px;padding:14px;border:1px solid #dce3ed;font-size:13px;font-weight:850;background:#fff;color:#475a76}
+    .modal-actions button.primary{border-color:#293955;background:#293955;color:white}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#1c2842;color:#fff;border-radius:13px;padding:12px 18px;font-size:12px;font-weight:750;box-shadow:0 12px 32px #0003;z-index:250;transition:all .18s;white-space:nowrap;max-width:calc(100vw - 24px)}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    @media(min-width:1200px){.hero{padding-bottom:66px}.overview{max-width:383px;margin-left:auto}}
+    @media(max-width:840px){.hero{gap:23px;grid-template-columns:1fr .8fr}.hero h1{font-size:37px}.hero-visual{max-width:310px}.stats{grid-template-columns:repeat(2,1fr)}.booth-grid{gap:12px}.booth-card{padding:19px}}
+    @media(max-width:650px){
+      .shell{padding:0 17px}.headerbar{padding-top:18px;padding-bottom:5px}.brand{font-size:13px}.brand small{font-size:9px}.top-link{font-size:11px;padding:8px 11px}
+      .hero{grid-template-columns:1fr;gap:14px;padding-top:30px;padding-bottom:38px}.hero h1{font-size:35px;line-height:1.25;margin:14px 0}.hero p{font-size:13px}.search-wrap{margin-top:23px}#search{font-size:14px;padding:17px 46px 17px 45px;border-radius:15px}.search-wrap svg{left:15px}
+      .hero-visual{display:none}.main{margin-top:-9px}.stats{gap:8px}.stat{padding:13px 11px;gap:8px;border-radius:15px}.stat-icon{width:37px;height:37px;font-size:18px;border-radius:11px}.stat b{font-size:19px}.stat span:last-child{font-size:10px}
+      .filters{padding-top:31px}.filters h2{margin-bottom:15px;font-size:25px}.tabbar{gap:7px}.tab{padding:11px 12px;min-width:unset;border-radius:13px;gap:3px}.tab-label{gap:6px;font-size:12px}.tab-emoji{font-size:15px}.tab .tab-count{padding:2px 6px;font-size:10px}
+      .tips{align-items:flex-start;font-size:11px;line-height:1.65}.category-row{padding-top:17px;padding-bottom:8px;margin-right:-17px;padding-right:17px}.category{padding:8px 12px;font-size:11px}.content-top{margin-top:25px}.content-top h3{font-size:22px}.floor-row{gap:6px}.floor-button{padding:9px 11px;font-size:12px}.booth-grid{grid-template-columns:1fr;gap:11px}.booth-card{min-height:210px;padding:19px;border-radius:18px}.booth-title{font-size:19px}.booth-description{font-size:14px}.floor-group{margin-bottom:24px}.floor-heading h4{font-size:21px}.floor-square{width:45px;height:45px;font-size:18px}
+      .footer-notice{padding:17px;margin-top:25px;gap:9px}.footer-inner{flex-direction:column;gap:13px}.modal-card{padding:25px 21px 24px;border-radius:22px}.modal-card h2{font-size:25px}.modal-actions button{padding:12px 9px;font-size:12px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#guide">부스 안내로 건너뛰기</a>
+  <header>
+    <div class="shell">
+      <div class="headerbar">
+        <a class="brand" href="#top" aria-label="어울림마당 첫 화면">
+          <span class="brand-tiles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span>송호고 어울림마당<small>2026 CAMPUS FESTIVAL</small></span>
+        </a>
+        <a class="top-link" href="https://canva.link/jud6ec7cknip3lc" target="_blank" rel="noopener noreferrer">📖 Canva 상세 자료 ↗</a>
+      </div>
+      <div class="hero" id="top">
+        <div>
+          <div class="hero-kicker"><span aria-hidden="true">✦</span> 2026 동아리어울림마당</div>
+          <h1>우리 학교,<br><strong>오늘은 놀이터!</strong></h1>
+          <p>어디서 뭘 하는지 궁금하다면? 건물과 층을 선택하거나 동아리 이름을 검색해 원하는 부스를 찾아보세요.</p>
+          <div class="search-wrap" role="search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 5 5"/></svg>
+            <input id="search" type="search" autocomplete="off" placeholder="동아리, 교실, 활동 이름 검색" aria-label="동아리명, 위치, 활동 내용 검색">
+            <button id="clearSearch" type="button" aria-label="검색어 지우기">×</button>
+          </div>
+          <div class="search-hint">예: 2-8 · 방탈출 · 고체 향수 · 코드</div>
+        </div>
+        <div class="hero-visual" aria-label="본관 층별 부스 미리보기">
+          <span class="visual-spark" aria-hidden="true">✳</span>
+          <div class="overview"><div class="overview-top"><span>🏫 본관 층별 안내</span><span>층을 눌러 바로 보기</span></div>
+            <div class="building-stack" id="buildingStack"><!-- JavaScript --> </div>
+            <div class="overview-foot">정확한 교실 위치 대신 층별로 정리했어요</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main shell" id="guide">
+    <div class="stats" aria-label="안내 부스 현황">
+      <div class="stat"><span class="stat-icon" aria-hidden="true">🎉</span><div><b id="totalCount">40</b><span>전체 운영 부스</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">🏫</span><div><b id="mainCount">31</b><span>본관</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">🎨</span><div><b id="annexCount">8</b><span>신관</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">🌿</span><div><b id="outCount">1</b><span>야외</span></div></div>
+    </div>
+    <section class="filters" aria-label="건물과 활동 유형 선택">
+      <div class="section-kicker">EXPLORE THE BOOTHS</div><h2>어디로 가볼까?</h2>
+      <div class="tabbar" role="tablist" aria-label="건물 선택">
+        <button class="tab" type="button" role="tab" data-building="본관" aria-selected="true"><span class="tab-label"><span class="tab-emoji" aria-hidden="true">🏫</span> 본관</span><span class="tab-count">31</span></button>
+        <button class="tab" type="button" role="tab" data-building="신관" aria-selected="false"><span class="tab-label"><span class="tab-emoji" aria-hidden="true">🎨</span> 신관</span><span class="tab-count">8</span></button>
+        <button class="tab" type="button" role="tab" data-building="야외" aria-selected="false"><span class="tab-label"><span class="tab-emoji" aria-hidden="true">🌿</span> 야외</span><span class="tab-count">1</span></button>
+      </div>
+      <div class="tips"><span>교실의 실제 좌우 배치가 아닌, 학생들이 빠르게 찾을 수 있는 <strong>건물·층별 안내</strong>입니다.</span></div>
+      <div class="category-row" id="categories" aria-label="활동 유형으로 필터"></div>
+    </section>
+    <section id="results" aria-live="polite" aria-label="부스 목록"></section>
+    <section class="footer-notice" aria-label="공연 준비 및 운영 안내">
+      <span class="notice-icon" aria-hidden="true">📣</span>
+      <div><strong>부스 운영 안내</strong><br>밴드반과 댄스반은 오후 공연 리허설로 체험 부스를 운영하지 않습니다.<br>풋살반은 <strong>운동장(풋살장)</strong>에서 활동하며, <strong>우천 시 신관 2층 1-4</strong>로 변경됩니다.</div>
+    </section>
+  </main>
+  <footer><div class="shell footer-inner">
+    <div><strong>2026 송호고 동아리어울림마당</strong><p>2026학년도 교실배치도, 「2026 창체동아리 어울림마당 활동 주제」 및 Canva 상세 안내 49페이지를 바탕으로 작성했습니다. 공동 운영 동아리는 하나의 부스로 묶어 표시했습니다. 교실명은 자료마다 일부 표기가 달라 상세 화면에 두 이름을 함께 안내합니다.</p><p>상세한 부스 자료: <a href="https://canva.link/jud6ec7cknip3lc" target="_blank" rel="noopener noreferrer">Canva 자료 열기 ↗</a></p></div>
+    <div>송호고등학교 · 부스 안내</div>
+  </div></footer>
+
+  <dialog id="boothDialog" aria-label="부스 상세 정보">
+    <div class="modal-card">
+      <button class="modal-close" type="button" id="modalClose" aria-label="상세 정보 닫기">×</button>
+      <div class="modal-location" id="modalLocation"></div>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-sub" id="modalClubs"></p>
+      <hr class="modal-rule">
+      <p class="modal-label">이곳에서는 이런 활동을 해요!</p>
+      <p class="modal-description" id="modalDescription"></p>
+      <div id="modalNotes"></div>
+      <div class="modal-actions">
+        <button type="button" id="modalShare" class="primary">🔗 이 부스 공유하기</button>
+        <button type="button" id="modalDone">다른 부스 보기</button>
+      </div>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!--
+  부스 내용을 수정하려면 아래 booth-data JSON에서 동아리명으로 검색하세요.
+  title = 부스 활동 주제, description = 활동 내용, room = 장소,
+  building = 본관/신관/야외, floor = 층수(야외 0).
+  쉼표와 따옴표를 지켜 주세요. GitHub Pages에 다시 업로드하면 같은 QR을 사용할 수 있습니다.
+-->
+  <script id="booth-data" type="application/json">[
+  {
+    "id": "booth-07",
+    "numbers": [
+      7
+    ],
+    "clubs": [
+      "푸드버디"
+    ],
+    "room": "교과교실3",
+    "building": "본관",
+    "floor": 4,
+    "title": "오감만족! 먹짱 테스트",
+    "description": "시각·청각·후각·미각·촉각으로 음식 퀴즈를 풀고, 모은 코인으로 식품을 구매해요.",
+    "category": "게임·퀴즈",
+    "mapRoom": "교과수업실3",
+    "details": [
+      "시각: 확대된 음식 사진을 보고 정답 맞히기",
+      "청각: 음식 소리만 듣고 맞히기",
+      "후각: 음식 냄새를 맡고 맞히기",
+      "미각: 눈을 가리고 음식을 맛보며 맞히기",
+      "촉각: 눈을 가리고 음식을 만져 맞히기",
+      "활동으로 얻은 코인으로 식품 구매하기"
+    ],
+    "sourcePages": [
+      7
+    ]
+  },
+  {
+    "id": "booth-47",
+    "numbers": [
+      47
+    ],
+    "clubs": [
+      "프리즘"
+    ],
+    "room": "물리실험실",
+    "building": "본관",
+    "floor": 4,
+    "title": "물리체험실",
+    "description": "각운동량 보존, 포물선 운동, 탄성력을 게임으로 직접 체험하는 물리 실험 부스예요.",
+    "category": "과학·탐구",
+    "mapRoom": "물리실",
+    "details": [
+      "피겨선수처럼 돌아라!: 각운동량 보존 체험",
+      "명중!: 포물선 운동 체험",
+      "탄성력으로 골인!: 물체를 튕겨 목표에 넣기"
+    ],
+    "sourcePages": [
+      47
+    ]
+  },
+  {
+    "id": "booth-33",
+    "numbers": [
+      33
+    ],
+    "clubs": [
+      "국제교류부1",
+      "국제교류부2"
+    ],
+    "room": "온배움스마트교실",
+    "building": "본관",
+    "floor": 4,
+    "title": "WHAT’S YOUR K-NAME?",
+    "description": "국제교류 동아리 활동을 구경하고 내 이름을 한글로 표현해 세상에 하나뿐인 이름 키링을 만들어요.",
+    "category": "게임·퀴즈",
+    "sourceNumbers": [
+      33,
+      34
+    ],
+    "mapRoom": "온배움스마트실",
+    "details": [
+      "국제교류 동아리 B.U.T.의 해외 친구 교류 활동을 팜플렛으로 관람",
+      "교류 국가·활동 사진과 학생들의 경험 및 결과물 살펴보기",
+      "나의 이름이나 영어 이름을 한글로 표현해 보기",
+      "한글 자음·모음을 활용해 원하는 글자와 장식을 골라 키링 만들기",
+      "이름과 언어를 통해 다른 문화를 경험하고 기념품 완성하기"
+    ],
+    "sourcePages": [
+      33,
+      34
+    ]
+  },
+  {
+    "id": "booth-26",
+    "numbers": [
+      26
+    ],
+    "clubs": [
+      "돋보기실험1",
+      "돋보기실험2"
+    ],
+    "room": "지구과학실",
+    "building": "본관",
+    "floor": 4,
+    "title": "돋비엔티암",
+    "description": "숨겨진 단서를 찾아 과학 문제를 풀고 제한 시간 내에 탈출하는 과학 방탈출이에요.",
+    "category": "방탈출",
+    "sourceNumbers": [
+      26,
+      27
+    ],
+    "details": [
+      "입장 전 진행 방법과 안전 수칙 안내받기",
+      "제한 시간 안에 숨겨진 단서를 찾고 학교에서 배운 과학 개념으로 문제 풀기",
+      "문제의 정답을 이용해 다음 단서를 찾거나 잠금장치 열기",
+      "어려운 문제가 나오면 단계별 힌트 활용하기",
+      "마지막 문제를 해결하면 방탈출 성공"
+    ],
+    "sourcePages": [
+      26,
+      27
+    ]
+  },
+  {
+    "id": "booth-44",
+    "numbers": [
+      44
+    ],
+    "clubs": [
+      "영자신문탐구반"
+    ],
+    "room": "2-1",
+    "building": "본관",
+    "floor": 3,
+    "title": "영어 뉴스룸 체험",
+    "description": "영어로 된 뉴스의 진위를 판단하고 발음 게임과 영어 상식 퀴즈에 도전해요.",
+    "category": "문화·체험",
+    "details": [
+      "FAKE OR REAL: 영어 뉴스 카드를 뽑아 진짜 뉴스인지 가짜 뉴스인지 맞히기",
+      "TONGUE TWISTER: 주어진 영어 문장을 정확하게 소리 내어 읽기",
+      "영어 상식 퀴즈: 영어와 관련된 다양한 상식 문제 풀기"
+    ],
+    "sourcePages": [
+      44
+    ]
+  },
+  {
+    "id": "booth-39",
+    "numbers": [
+      39
+    ],
+    "clubs": [
+      "경제경영인사이트"
+    ],
+    "room": "2-2",
+    "building": "본관",
+    "floor": 3,
+    "title": "경제의 마블 & 경영이 모찌?",
+    "description": "경제 지식을 익히는 게임을 즐기고, 게임을 융합한 가벼운 간식 만들기도 체험해요.",
+    "category": "게임·퀴즈",
+    "details": [
+      "경제 지식을 알아보는 게임 즐기기",
+      "게임과 연계된 가벼운 간식 만들기"
+    ],
+    "sourcePages": [
+      39
+    ]
+  },
+  {
+    "id": "booth-29",
+    "numbers": [
+      29
+    ],
+    "clubs": [
+      "교집합"
+    ],
+    "room": "2-3",
+    "building": "본관",
+    "floor": 3,
+    "title": "방탈출: 선생님 몰래 시험지를 빼돌려라!",
+    "description": "학교 교실을 배경으로 국어·수학·사회 등 여러 교과의 지식을 활용해 함께 문제를 해결하는 방탈출이에요.",
+    "category": "방탈출",
+    "details": [
+      "학교와 교실을 배경으로 한 협동형 방탈출 체험",
+      "국어·수학·사회 등 여러 교과의 지식을 활용해 문제 해결",
+      "친구들과 협동해 미션을 완수하기"
+    ],
+    "sourcePages": [
+      29
+    ]
+  },
+  {
+    "id": "booth-35",
+    "numbers": [
+      35
+    ],
+    "clubs": [
+      "경영전략분석동아리"
+    ],
+    "room": "2-4",
+    "building": "본관",
+    "floor": 3,
+    "title": "투자할 것인가, 도전할 것인가",
+    "description": "두뇌 게임에 도전해 동전을 모으고 상품으로 교환하는 체험 부스예요.",
+    "category": "게임·퀴즈",
+    "details": [
+      "두뇌 게임에 참여하기",
+      "게임에서 동전 획득하기",
+      "모은 동전으로 상품 교환하기"
+    ],
+    "sourcePages": [
+      35
+    ]
+  },
+  {
+    "id": "booth-36",
+    "numbers": [
+      36
+    ],
+    "clubs": [
+      "생명이음"
+    ],
+    "room": "2-5",
+    "building": "본관",
+    "floor": 3,
+    "title": "건강한 손을 위한 DIY",
+    "description": "종이비누와 핸드크림을 직접 만들고 손 위생·보습이 중요한 이유도 알아봐요.",
+    "category": "만들기",
+    "details": [
+      "올바른 손 위생과 보습이 감염 예방에 중요한 이유를 간호 관점에서 배우기",
+      "감염 예방을 위한 종이비누와 손을 보호하는 핸드크림 만들기",
+      "공병을 꾸미고 완성품 가져가기",
+      "1인당 체험 소요 시간 약 5분"
+    ],
+    "sourcePages": [
+      36
+    ]
+  },
+  {
+    "id": "booth-42",
+    "numbers": [
+      42
+    ],
+    "clubs": [
+      "소셜인사이트"
+    ],
+    "room": "2-6",
+    "building": "본관",
+    "floor": 3,
+    "title": "우리가 몰랐던 삶의 장벽",
+    "description": "흰지팡이·촉각 체험으로 장애에 대한 이해를 넓히고 인식 개선 퀴즈에 도전해요.",
+    "category": "문화·체험",
+    "details": [
+      "흰지팡이를 사용해 목적지에 도착하기",
+      "손의 감각만으로 물건 맞히기",
+      "장애 인식 개선 퀴즈 풀기",
+      "미션을 통과하면 상품 받기"
+    ],
+    "sourcePages": [
+      42
+    ]
+  },
+  {
+    "id": "booth-38",
+    "numbers": [
+      38
+    ],
+    "clubs": [
+      "시선사진신문부"
+    ],
+    "room": "2-7",
+    "building": "본관",
+    "floor": 3,
+    "title": "오늘의 특종! 헤드라인 헌터",
+    "description": "수습 기자가 되어 신문 헤드라인 단어를 조합하고 기사 내용을 추리하는 미션에 도전해요.",
+    "category": "게임·퀴즈",
+    "details": [
+      "수습 기자가 되어 헤드라인 단어 조합하기",
+      "기사 내용을 추리해 미션 수행하기",
+      "미션 결과에 따라 완성된 기사 평가받기"
+    ],
+    "sourcePages": [
+      38
+    ]
+  },
+  {
+    "id": "booth-16",
+    "numbers": [
+      16
+    ],
+    "clubs": [
+      "명작영화평론반"
+    ],
+    "room": "2-8",
+    "building": "본관",
+    "floor": 3,
+    "title": "명작 영화 상영 및 OX 퀴즈 한마당",
+    "description": "당일 공개되는 명작 영화를 미니 영화관에서 감상하고 영화 OX 퀴즈에 도전해요.",
+    "category": "문화·체험",
+    "details": [
+      "미니 영화관에서 명작 영화 관람(상영작은 행사 당일 공개)",
+      "동아리원들이 직접 만든 영화 관련 OX 퀴즈 풀기",
+      "퀴즈 정답자에게 상품 증정"
+    ],
+    "sourcePages": [
+      16
+    ]
+  },
+  {
+    "id": "booth-04",
+    "numbers": [
+      4
+    ],
+    "clubs": [
+      "교육과정서포터즈1",
+      "교육과정서포터즈2"
+    ],
+    "room": "교과교실4",
+    "building": "본관",
+    "floor": 3,
+    "title": "슬기로운 학점생활 - 하루 만에 졸업하기",
+    "description": "국어·영어·수학·체육 미니게임을 즐기며 학점 도장을 모으고 졸업장과 상품에 도전해요.",
+    "category": "게임·퀴즈",
+    "sourceNumbers": [
+      4,
+      5
+    ],
+    "mapRoom": "교과수업실4",
+    "details": [
+      "국어: 속담 초성 퀴즈",
+      "영어: 스크램블 게임",
+      "수학: 한붓그리기",
+      "체육: 물병 세우기",
+      "4과목 학점(도장)을 모아 졸업장 받기",
+      "10년 뒤 내 모습으로 졸업 포토존에서 즉석 사진 촬영",
+      "졸업장을 받은 뒤 뽑기판에 도전해 상품 받기"
+    ],
+    "sourcePages": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": "booth-09",
+    "numbers": [
+      9
+    ],
+    "clubs": [
+      "백야의 선율"
+    ],
+    "room": "교과교실5",
+    "building": "본관",
+    "floor": 3,
+    "title": "백야의 북카페",
+    "description": "러시아 클래식 음악이 흐르는 북카페에서 직접 가져온 책을 읽고 작은 선물 퀴즈에 참여해요.",
+    "category": "문화·체험",
+    "mapRoom": "교과수업실5",
+    "details": [
+      "러시아 클래식 음악과 함께 조용히 책 읽기",
+      "읽을 책은 참가자가 직접 준비",
+      "선착순 15명은 퀴즈 정답을 맞히면 학용품·생활용품 등 작은 선물 받기"
+    ],
+    "sourcePages": [
+      9
+    ]
+  },
+  {
+    "id": "booth-11",
+    "numbers": [
+      11
+    ],
+    "clubs": [
+      "왓이프역사"
+    ],
+    "room": "교과교실6",
+    "building": "본관",
+    "floor": 3,
+    "title": "역사영화 스탬프 투어",
+    "description": "역사영화 OX 팩트체크와 명대사 퀴즈, 한 줄 평 투표, 3·1 운동 포토존을 돌아보는 스탬프 투어예요.",
+    "category": "게임·퀴즈",
+    "mapRoom": "교과수업실6",
+    "details": [
+      "플립 O/X 팩트체크: 영화 속 장면과 실제 역사가 일치하는지 판단하기",
+      "명대사 퀴즈: 인물의 말로 역사 인물·사건·영화 맞히기",
+      "인생 역사영화 한 줄 평 남기고 「영화로 만들어야 할 역사」에 스티커 투표",
+      "1919년 3·1 운동 호외 포토존에서 사진 찍기",
+      "3개 코너를 완료하면 간식을 받고 추첨에 응모하기"
+    ],
+    "sourcePages": [
+      11
+    ]
+  },
+  {
+    "id": "booth-28",
+    "numbers": [
+      28
+    ],
+    "clubs": [
+      "또래상담반"
+    ],
+    "room": "라온2",
+    "building": "본관",
+    "floor": 3,
+    "title": "나만의 향기, 힐링 디퓨저 만들기",
+    "description": "다양한 향기를 맡으며 내 취향과 감정을 알아보고 친구들과 이야기하며 힐링 디퓨저를 만들어요.",
+    "category": "만들기",
+    "details": [
+      "다양한 향을 맡으며 떠오르는 감정과 생각 알아보기",
+      "좋아하는 향과 자신의 취향을 친구들과 나누기",
+      "내 취향에 맞는 나만의 힐링 디퓨저 만들기"
+    ],
+    "sourcePages": [
+      28
+    ]
+  },
+  {
+    "id": "booth-48",
+    "numbers": [
+      48
+    ],
+    "clubs": [
+      "화학생명실험동아리"
+    ],
+    "room": "생명실",
+    "building": "본관",
+    "floor": 3,
+    "title": "돋비엔티암",
+    "description": "교과 과학 지식으로 숨겨진 단서를 찾고 문제를 풀어 제한 시간 안에 방을 탈출해요.",
+    "category": "방탈출",
+    "mapRoom": "생물실",
+    "details": [
+      "입장 전 진행 방법과 안전 수칙 안내받기",
+      "제한 시간 안에 공간에 숨겨진 단서 찾기",
+      "학교에서 배운 과학 개념으로 문제를 풀어 다음 단서나 잠금장치 열기",
+      "문제가 어려우면 단계별 힌트 활용하기",
+      "마지막 문제를 풀어 방탈출 성공하기"
+    ],
+    "sourcePages": [
+      48
+    ]
+  },
+  {
+    "id": "booth-10",
+    "numbers": [
+      10
+    ],
+    "clubs": [
+      "미디어속과학탐구반"
+    ],
+    "room": "화학실",
+    "building": "본관",
+    "floor": 3,
+    "title": "향기 연구소",
+    "description": "미디어 속 과학 원리와 향기 관련 포스터를 살펴보고 나만의 고체 향수를 만들어요.",
+    "category": "만들기",
+    "details": [
+      "동아리가 분석한 미디어 속 과학 원리 포스터 관람",
+      "향기와 관련된 과학 원리 포스터 살펴보기",
+      "원하는 향을 골라 고체 향수 만들기"
+    ],
+    "sourcePages": [
+      10
+    ]
+  },
+  {
+    "id": "booth-01",
+    "numbers": [
+      1
+    ],
+    "clubs": [
+      "탄소중립환경동아리1",
+      "탄소중립환경동아리2"
+    ],
+    "room": "1-10",
+    "building": "본관",
+    "floor": 2,
+    "title": "에코 아케이드",
+    "description": "환경 퀴즈·분리배출 골인·카드 기억력 게임·온실기체 잡기까지 4가지 미니게임에 도전하고 상품 뽑기에 참여해요.",
+    "category": "게임·퀴즈",
+    "sourceNumbers": [
+      1,
+      2
+    ],
+    "details": [
+      "지구잘알 테스트: 환경 관련 퀴즈 풀기",
+      "분리수GO!: 분리배출 골인 게임",
+      "그린 메모리: 환경 카드 메모리 게임",
+      "온실기체 헌터: 온실기체 잡기",
+      "4가지 미니게임을 체험한 뒤 상품 뽑기"
+    ],
+    "sourcePages": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "booth-17",
+    "numbers": [
+      17
+    ],
+    "clubs": [
+      "통합주제탐구디자인반1",
+      "통합주제탐구디자인반2"
+    ],
+    "room": "1-11",
+    "building": "본관",
+    "floor": 2,
+    "title": "통합탐구 오락실 - 놀면서 지식 레벨 UP!",
+    "description": "공기 대포·사격·물병 세우기 게임을 즐기며 사회·과학·예술 퀴즈와 행운의 룰렛에 도전해요.",
+    "category": "게임·퀴즈",
+    "sourceNumbers": [
+      17,
+      18
+    ],
+    "details": [
+      "공기 대포: 바람으로 종이컵 탑 무너뜨리기",
+      "명사수 사격: 집중력으로 과녁 맞히기",
+      "물병 세우기: 손목 스냅을 활용한 물병 세우기",
+      "사회·과학·예술 관련 퀴즈 풀기",
+      "운명의 룰렛·뽑기판으로 상품에 도전하기"
+    ],
+    "sourcePages": [
+      17,
+      18
+    ]
+  },
+  {
+    "id": "booth-24",
+    "numbers": [
+      24
+    ],
+    "clubs": [
+      "내가그린기린그림"
+    ],
+    "room": "1-7",
+    "building": "본관",
+    "floor": 2,
+    "title": "내 마음 꾸미기",
+    "description": "모루 꽃다발과 워리스톤을 만들거나 헤나 그림을 체험하며 마음을 꾸미는 부스예요.",
+    "category": "만들기",
+    "details": [
+      "모루 꽃다발 만들고 익명으로 마음 전하기(예약제)",
+      "마음이 불안할 때 만지며 쉴 수 있는 워리스톤 만들기(예약제)",
+      "헤나로 몸에 그림 그리기"
+    ],
+    "sourcePages": [
+      24
+    ]
+  },
+  {
+    "id": "booth-13",
+    "numbers": [
+      13
+    ],
+    "clubs": [
+      "금요시네마"
+    ],
+    "room": "1-8",
+    "building": "본관",
+    "floor": 2,
+    "title": "오징어게임 달고나 체험",
+    "description": "오징어게임 속 달고나 게임처럼 모양을 부수지 않고 떼어 내면 상품을 받아요.",
+    "category": "먹거리",
+    "details": [
+      "여러 가지 모양의 달고나 고르기",
+      "모양이 깨지지 않도록 테두리를 따라 분리하기",
+      "모양을 온전히 분리하는 데 성공하면 상품 받기"
+    ],
+    "sourcePages": [
+      13
+    ]
+  },
+  {
+    "id": "booth-03",
+    "numbers": [
+      3
+    ],
+    "clubs": [
+      "웹소설연구소"
+    ],
+    "room": "1-9",
+    "building": "본관",
+    "floor": 2,
+    "title": "웹소설 마니아",
+    "description": "내가 읽은 최애 웹소설을 추천서에 소개하고, 내용에 따라 상품도 받아 보세요.",
+    "category": "문화·체험",
+    "details": [
+      "좋아하는 웹소설을 골라 추천서 작성",
+      "추천서는 최소 10줄 이상 작성해야 인정",
+      "내용 충실도에 따라 상품 수여, 참가상도 제공 예정"
+    ],
+    "sourcePages": [
+      3
+    ]
+  },
+  {
+    "id": "booth-31",
+    "numbers": [
+      31
+    ],
+    "clubs": [
+      "매쓰코드"
+    ],
+    "room": "2-10",
+    "building": "본관",
+    "floor": 2,
+    "title": "루돌프의 길찾기",
+    "description": "산타를 찾아 떠나는 루돌프가 되어 미로 속 수학 문제를 해결하고 탈출해요.",
+    "category": "방탈출",
+    "details": [
+      "루돌프가 되어 미로 속으로 들어가기",
+      "산타를 찾기 위한 수학 문제를 차례로 해결하기",
+      "수학 미션을 클리어하고 미로 탈출하기"
+    ],
+    "sourcePages": [
+      31
+    ]
+  },
+  {
+    "id": "booth-32",
+    "numbers": [
+      32
+    ],
+    "clubs": [
+      "메디플보건반"
+    ],
+    "room": "2-11",
+    "building": "본관",
+    "floor": 2,
+    "title": "귀신의 집 (폐병원)",
+    "description": "폐병원 콘셉트 귀신의 집에서 미로를 탈출하고 보건 상식 문제를 풀어 상품에 도전해요.",
+    "category": "방탈출",
+    "details": [
+      "폐병원 귀신의 집 미로에 들어가기",
+      "보건 상식 관련 문제를 풀고 상품 받기",
+      "문제를 풀지 못하면 귀신과 마주칠 수도 있어요"
+    ],
+    "sourcePages": [
+      32
+    ]
+  },
+  {
+    "id": "booth-25",
+    "numbers": [
+      25
+    ],
+    "clubs": [
+      "아이랑도담도담"
+    ],
+    "room": "2-9",
+    "building": "본관",
+    "floor": 2,
+    "title": "도담도담 모루공방",
+    "description": "도란도란 앉아 걱정 인형을 만들며 고민을 덜고 마음을 편안하게 하는 모루공방이에요.",
+    "category": "만들기",
+    "details": [
+      "함께 앉아 걱정 인형 만들기",
+      "걱정이나 고민을 덜어내며 심리적 안정 느끼기"
+    ],
+    "sourcePages": [
+      25
+    ]
+  },
+  {
+    "id": "booth-43",
+    "numbers": [
+      43
+    ],
+    "clubs": [
+      "코드"
+    ],
+    "room": "2층 컴퓨터실",
+    "building": "본관",
+    "floor": 2,
+    "title": "게임 왕을 찾아라!!",
+    "description": "동아리원이 제작한 게임을 직접 플레이하고 최고 점수에 도전해 게임왕을 뽑아요.",
+    "category": "게임·퀴즈",
+    "details": [
+      "동아리원들이 개인 또는 조별로 만든 게임 플레이하기",
+      "게임을 즐기며 제작 학생들에게 피드백 전달하기",
+      "최고 점수를 획득한 참가자 시상"
+    ],
+    "sourcePages": [
+      43
+    ]
+  },
+  {
+    "id": "booth-19",
+    "numbers": [
+      19
+    ],
+    "clubs": [
+      "방송반1",
+      "방송반2"
+    ],
+    "room": "방송실",
+    "building": "본관",
+    "floor": 2,
+    "title": "모루 꽃 공방 & 포토부스",
+    "description": "모루 철사 꽃을 직접 만들어 마음을 전하고, 포토부스에서 축제의 추억을 남겨요.",
+    "category": "만들기",
+    "sourceNumbers": [
+      19,
+      20
+    ],
+    "details": [
+      "모루 꽃 공방: 모루 철사를 꼬고 구부려 꽃 만들기",
+      "마음 배달부: 방송부원이 친구나 선생님에게 꽃 배달하기",
+      "포토부스: 친구와 함께 축제 기념사진 남기기"
+    ],
+    "sourcePages": [
+      19,
+      20
+    ]
+  },
+  {
+    "id": "booth-21",
+    "numbers": [
+      21
+    ],
+    "clubs": [
+      "요리조리반"
+    ],
+    "room": "가사실",
+    "building": "본관",
+    "floor": 1,
+    "title": "한입정선",
+    "description": "여러 가지 과일을 듬뿍 넣어 나만의 찹쌀떡을 만드는 먹거리 체험이에요.",
+    "category": "먹거리",
+    "details": [
+      "좋아하는 과일을 골라 넣기",
+      "과일을 넣어 나만의 찹쌀떡 만들기"
+    ],
+    "sourcePages": [
+      21
+    ]
+  },
+  {
+    "id": "booth-49",
+    "numbers": [
+      49
+    ],
+    "clubs": [
+      "농구반"
+    ],
+    "room": "건강체력교실",
+    "building": "본관",
+    "floor": 1,
+    "title": "체력왕 선발대회",
+    "description": "악력·유연성·순발력·근지구력을 측정해 체력왕에 도전하고 농구 대항 게임도 즐겨요.",
+    "category": "체육·활동",
+    "details": [
+      "근력: 악력 측정",
+      "유연성: 앉아 윗몸 앞으로 굽히기",
+      "순발력: 제자리멀리뛰기",
+      "근지구력: 윗몸일으키기",
+      "종합 체력 측정 결과를 합산해 송호고 체력왕 선발",
+      "농구 및 대항 게임 참여"
+    ],
+    "sourcePages": [
+      49
+    ],
+    "sourceRoom": "체력단련실"
+  },
+  {
+    "id": "booth-22",
+    "numbers": [
+      22
+    ],
+    "clubs": [
+      "가온누리도서부1",
+      "가온누리도서부2"
+    ],
+    "room": "도서관",
+    "building": "본관",
+    "floor": 1,
+    "title": "책 읽는 스티브",
+    "description": "마인크래프트 테마의 동굴·잔디·지옥·아트 ZONE에서 미션과 키링 만들기를 체험해요.",
+    "category": "방탈출",
+    "sourceNumbers": [
+      22,
+      23
+    ],
+    "mapRoom": "도서실",
+    "details": [
+      "동굴 ZONE: 동굴 속 다이아몬드 찾기",
+      "잔디 ZONE: 텔레파시 게임",
+      "지옥 ZONE: 몬스터 잡기",
+      "아트 ZONE: 마인크래프트 키링 만들기"
+    ],
+    "sourcePages": [
+      22,
+      23
+    ]
+  },
+  {
+    "id": "booth-46",
+    "numbers": [
+      46
+    ],
+    "clubs": [
+      "잔상과장면"
+    ],
+    "room": "1-6",
+    "building": "신관",
+    "floor": 2,
+    "title": "일일 맹구체험",
+    "description": "동아리 학생들의 그림을 감상하고 워리스톤과 알록달록 비즈 팔찌를 만들며 쉬어 가요.",
+    "category": "만들기",
+    "details": [
+      "2026학년도 잔상과장면반 학생들의 그림 감상하기",
+      "손안에서 만지며 마음을 가라앉히는 워리스톤 만들기",
+      "비즈를 한 알씩 꿰어 나만의 알록달록 비즈 팔찌 만들기"
+    ],
+    "sourcePages": [
+      46
+    ]
+  },
+  {
+    "id": "booth-08",
+    "numbers": [
+      8
+    ],
+    "clubs": [
+      "미디어속문화탐구반"
+    ],
+    "room": "1-1",
+    "building": "신관",
+    "floor": 1,
+    "title": "유 퀴즈 온 더 미디어 (You Quiz on the Media)",
+    "description": "영화를 감상하고 영화 제목, 명대사와 여러 문화에 관한 퀴즈에 도전해요.",
+    "category": "문화·체험",
+    "details": [
+      "영화 감상하기",
+      "영화 제목 맞히기",
+      "영화 속 명대사와 문화 관련 퀴즈 풀기"
+    ],
+    "sourcePages": [
+      8
+    ]
+  },
+  {
+    "id": "booth-15",
+    "numbers": [
+      15
+    ],
+    "clubs": [
+      "매쓰토피아"
+    ],
+    "room": "1-2",
+    "building": "신관",
+    "floor": 1,
+    "title": "이 세계에선 계산이 곧 무기다!",
+    "description": "수학 퀴즈와 게임 미션에 도전해 문제를 맞히고 특별한 선물을 받아요.",
+    "category": "게임·퀴즈",
+    "details": [
+      "다양한 수학 퀴즈에 도전하기",
+      "게임 속 수학 미션을 클리어하기",
+      "정답을 맞히거나 미션을 성공하면 선물 받기"
+    ],
+    "sourcePages": [
+      15
+    ]
+  },
+  {
+    "id": "booth-12",
+    "numbers": [
+      12
+    ],
+    "clubs": [
+      "글로벌음악톡톡"
+    ],
+    "room": "1-3",
+    "building": "신관",
+    "floor": 1,
+    "title": "글로벌 음악톡톡! 노래하고 맞혀보자!",
+    "description": "다양한 음악을 즐기며 노래방 활동에 참여하고 음악 퀴즈에 도전해요.",
+    "category": "문화·체험",
+    "details": [
+      "다양한 음악 감상 및 노래방 활동에 참여하기",
+      "음악과 관련된 퀴즈 풀고 정답 맞히기"
+    ],
+    "sourcePages": [
+      12
+    ]
+  },
+  {
+    "id": "booth-45",
+    "numbers": [
+      45
+    ],
+    "clubs": [
+      "하이배구"
+    ],
+    "room": "라온1",
+    "building": "신관",
+    "floor": 1,
+    "title": "배구왕 K-하이큐",
+    "description": "배구의 다섯 포지션 가운데 나와 어울리는 역할을 찾아보고 관련 미션을 수행해요.",
+    "category": "체육·활동",
+    "details": [
+      "세터·아웃사이드 히터·미들블로커·리베로·아포짓 등 포지션 알아보기",
+      "내 성향과 어울리는 포지션 찾아보기",
+      "포지션에 맞는 체험 미션 수행하기"
+    ],
+    "sourcePages": [
+      45
+    ]
+  },
+  {
+    "id": "booth-14",
+    "numbers": [
+      14
+    ],
+    "clubs": [
+      "수근수근건축연구소"
+    ],
+    "room": "미술실1",
+    "building": "신관",
+    "floor": 1,
+    "title": "아키텍처 페스티벌",
+    "description": "다양한 재료로 개성 있는 건축물을 만들어 보고, 건축 퀴즈도 풀어 상품을 받아요.",
+    "category": "만들기",
+    "mapRoom": "미술실Ⅰ",
+    "details": [
+      "다양한 재료로 재미있는 건축물 만들기",
+      "건축 관련 퀴즈 맞히고 상품 받기"
+    ],
+    "sourcePages": [
+      14
+    ]
+  },
+  {
+    "id": "booth-41",
+    "numbers": [
+      41
+    ],
+    "clubs": [
+      "맨몸운동반"
+    ],
+    "room": "실내체육실1",
+    "building": "신관",
+    "floor": 1,
+    "title": "강철송호",
+    "description": "팔굽혀펴기·플랭크 운동 대결과 균형감각 게임에 참가해 보세요. 참가 상품도 있어요.",
+    "category": "체육·활동",
+    "details": [
+      "동아리원과 참가 학생 사이의 팔굽혀펴기·플랭크 운동 대결",
+      "외발로 오래 서 있기 등 균형감각 뽐내기 게임",
+      "참가만 해도 상품이 있다는 안내"
+    ],
+    "sourcePages": [
+      41
+    ]
+  },
+  {
+    "id": "booth-40",
+    "numbers": [
+      40
+    ],
+    "clubs": [
+      "여가활동반"
+    ],
+    "room": "학습도움실2·3",
+    "building": "신관",
+    "floor": 1,
+    "title": "여가활동 힐링공작소",
+    "description": "크리스마스 쿠키를 꾸미고 솜사탕·달고나를 만들면서 여가활동을 즐겨요.",
+    "category": "먹거리",
+    "details": [
+      "나만의 크리스마스 쿠키 데코하기",
+      "솜사탕 만들기",
+      "달고나 만들기",
+      "사부작사부작 여러 여가활동을 체험하는 힐링 공작소"
+    ],
+    "sourcePages": [
+      40
+    ]
+  },
+  {
+    "id": "booth-06",
+    "numbers": [
+      6
+    ],
+    "clubs": [
+      "풋살반"
+    ],
+    "room": "운동장(풋살장)",
+    "building": "야외",
+    "floor": 0,
+    "title": "골! 골! 골! 공을 넣어 보자!",
+    "description": "풋살을 알아보고, 공을 차서 미니 골대에 넣거나 지정한 목표물을 맞혀 보세요.",
+    "category": "체육·활동",
+    "sourceClub": "풋살1반",
+    "rainRoom": "1-4",
+    "rainBuilding": "신관",
+    "rainFloor": 2,
+    "details": [
+      "풋살이 어떤 스포츠인지 알아보기",
+      "풋살 공을 발로 차서 미니 골대에 골 넣기",
+      "공을 차서 지정된 목표 장소 맞히기",
+      "비가 오는 날에는 신관 2층 1-4에서 운영"
+    ],
+    "sourcePages": [
+      6
+    ]
+  }
+]</script>
+  <script>
+  (()=>{
+    'use strict';
+    const booths=JSON.parse(document.getElementById('booth-data').textContent);
+    const categories=['전체','게임·퀴즈','만들기','방탈출','먹거리','문화·체험','체육·활동','과학·탐구'];
+    const palette={
+      '게임·퀴즈':['#b8dcff','#4676a2','🎲'],
+      '만들기':['#ffd8cc','#bc6d55','🎨'],
+      '방탈출':['#dacdff','#7a5cbb','🗝️'],
+      '먹거리':['#ffe3aa','#9f722c','🍡'],
+      '문화·체험':['#c8ebde','#397b65','🎬'],
+      '체육·활동':['#ffd0d8','#a75068','🏀'],
+      '과학·탐구':['#c3e8fd','#4e8f9c','🔬']
+    };
+    const count=b=>booths.filter(x=>x.building===b).length;
+    document.getElementById('totalCount').textContent=booths.length;
+    document.getElementById('mainCount').textContent=count('본관');
+    document.getElementById('annexCount').textContent=count('신관');
+    document.getElementById('outCount').textContent=count('야외');
+    document.querySelectorAll('[data-building]').forEach(el=>el.querySelector('.tab-count').textContent=count(el.dataset.building));
+    const state={building:'본관',floor:'all',category:'전체',search:''};
+    const results=document.getElementById('results');
+    const search=document.getElementById('search');
+    const clearSearch=document.getElementById('clearSearch');
+    const dialog=document.getElementById('boothDialog');
+    let currentBooth=null,previousFocus=null,toastTimer=null;
+    const esc=v=>String(v).replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+    const clubLabel=x=>{
+      if(x.clubs.length===2){const a=x.clubs[0].match(/^(.*?)(\d+)$/),b=x.clubs[1].match(/^(.*?)(\d+)$/);if(a&&b&&a[1]===b[1])return `${a[1]} ${a[2]}·${b[2]}`}
+      return x.clubs.join(' · ');
+    };
+    const norm=s=>String(s).normalize('NFKC').toLowerCase().replace(/[\s·()!?:,/&.\-]+/g,'');
+    const searchable=x=>norm([x.title,x.description,x.clubs.join(' '),x.room,x.building,x.floor?x.floor+'층':'야외',x.category,x.mapRoom||'',x.rainRoom||'',...(x.details||[]),x.sourceRoom||''].join(' '));
+    const floorSort=(a,b)=>b-a;
+    const buildingSort={'본관':0,'신관':1,'야외':2};
+    const roomOrder=(a,b)=>a.room.localeCompare(b.room,'ko',{numeric:true});
+    const globalMode=()=>!!state.search||state.category!=='전체';
+    const filtered=()=>booths.filter(x=>{
+      if(state.category!=='전체'&&x.category!==state.category)return false;
+      if(state.search&&!state.search.trim().split(/\s+/).map(norm).filter(Boolean).every(term=>searchable(x).includes(term)))return false;
+      if(!globalMode()&&(x.building!==state.building||(state.floor!=='all'&&x.floor!==state.floor)))return false;
+      return true;
+    });
+    const element=(name,className,text)=>{const x=document.createElement(name);if(className)x.className=className;if(text!==undefined)x.textContent=text;return x};
+    function renderCategories(){
+      const host=document.getElementById('categories');host.replaceChildren();
+      categories.forEach(cat=>{const b=element('button','category'+(state.category===cat?' active':''),cat);b.type='button';b.setAttribute('aria-pressed',String(state.category===cat));b.addEventListener('click',()=>{state.category=cat;render();});host.append(b)});
+    }
+    function renderStack(){
+      const container=document.getElementById('buildingStack');container.replaceChildren();
+      [4,3,2,1].forEach(f=>{const n=booths.filter(x=>x.building==='본관'&&x.floor===f).length;
+        const b=element('button','stack-row');b.type='button';
+        b.innerHTML=`<strong>${f}F</strong><span>체험 부스 ${n}곳 →</span>`;
+        b.addEventListener('click',()=>{state.building='본관';state.floor=f;state.category='전체';state.search='';search.value='';render();document.getElementById('guide').scrollIntoView({behavior:'smooth',block:'start'});});
+        container.append(b);
+      });
+    }
+    function renderFloors(){
+      if(globalMode())return null;
+      const wrap=element('div','floor-row');
+      if(state.building==='야외')return wrap;
+      const floors=[...new Set(booths.filter(x=>x.building===state.building).map(x=>x.floor))].sort(floorSort);
+      [{value:'all',label:'모든 층'},...floors.map(f=>({value:f,label:f+'층'}))].forEach(item=>{
+        const b=element('button','floor-button'+(state.floor===item.value?' active':''),item.label);
+        b.type='button';b.setAttribute('aria-pressed',String(state.floor===item.value));b.addEventListener('click',()=>{state.floor=item.value;render();});wrap.append(b)
+      });
+      return wrap;
+    }
+    function makeCard(x){
+      const accent=palette[x.category]||palette['게임·퀴즈'];
+      const card=element('button','booth-card');card.type='button';card.setAttribute('aria-label',`${x.room} ${clubLabel(x)}: ${x.title}. 자세히 보기`);
+      card.style.setProperty('--accent',accent[0]);card.style.setProperty('--category-text',accent[1]);
+      const short=x.description;
+      card.innerHTML=`<div class="booth-meta"><span class="room">📍 ${esc(x.room)}</span><span class="type">${accent[2]} ${esc(x.category)}</span></div><h5 class="booth-title">${esc(x.title)}</h5><p class="booth-clubs">${esc(clubLabel(x))}</p><p class="booth-description">${esc(short)}</p><div class="booth-bottom"><span>${esc(x.building)}${x.floor?' · '+x.floor+'층':''}${x.rainRoom?' · 우천 시 장소 변경':''}</span><span>활동 살펴보기 →</span></div>`;
+      card.addEventListener('click',()=>openBooth(x));return card;
+    }
+    function makeFloorGroup(building,floor,arr,searchMode=false){
+      const group=element('section','floor-group');
+      const heading=element('div',searchMode?'search-group-heading':'floor-heading');
+      if(searchMode){heading.innerHTML=`${esc(building)}${floor?' · '+floor+'층':''} <span>${arr.length}곳</span>`;}
+      else{
+        const sq=element('div','floor-square',floor?String(floor).padStart(2,'0'):'🌿');
+        const titles=element('div');const h=element('h4','',floor?floor+'층':'운동장·야외');const sub=element('p','',`체험 부스 ${arr.length}곳`);titles.append(h,sub);
+        heading.append(sq,titles,element('div','floor-line'));
+      }
+      group.append(heading);
+      if(building==='신관'&&floor===2&&!searchMode){const note=element('div','floor-note');note.innerHTML='<strong>☔ 비가 올 경우</strong> 풋살반 활동이 <b>신관 2층 1-4</b>에서 진행됩니다. (평상시에는 운동장 풋살장)';group.append(note)}
+      const grid=element('div','booth-grid');arr.sort(roomOrder).forEach(x=>grid.append(makeCard(x)));group.append(grid);return group;
+    }
+    function render(){
+      clearSearch.style.display=search.value?'block':'none';
+      document.querySelectorAll('[data-building]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.building===state.building)));
+      renderCategories();results.replaceChildren();
+      const items=filtered(), all=globalMode();
+      const titleWrap=element('div','content-top');const left=element('div');
+      const title=element('h3','',all?'전체 부스 검색 결과':state.building==='야외'?'야외 체험 부스':state.building+' 층별 안내');
+      const subtitle=element('p','',all?'건물과 층에 상관없이 찾았어요.':state.building==='야외'?'운동장과 우천 시 변경 장소 확인':'층을 고르면 해당 층 부스만 볼 수 있어요.');
+      left.append(title,subtitle);titleWrap.append(left,element('span','resultcount',items.length+'곳'));results.append(titleWrap);
+      const floors=renderFloors();if(floors)results.append(floors);
+      if(items.length===0){
+        const e=element('div','empty');e.innerHTML='<span class="empty-emoji">🔎</span><strong>일치하는 부스가 없어요</strong>다른 동아리명, 교실 번호 또는 활동을 검색해 보세요.';
+        const reset=element('button','clear-all','검색·필터 초기화');reset.type='button';reset.addEventListener('click',()=>{state.search='';state.category='전체';state.floor='all';search.value='';render();});e.append(reset);results.append(e);return;
+      }
+      const keys=[...new Set(items.map(x=>x.building+':'+x.floor))].sort((a,b)=>{
+        const [ba,fa]=a.split(':'),[bb,fb]=b.split(':');return (buildingSort[ba]-buildingSort[bb])||(Number(fb)-Number(fa));
+      });
+      keys.forEach(key=>{const [b,f]=key.split(':');results.append(makeFloorGroup(b,Number(f),items.filter(x=>x.building===b&&x.floor===Number(f)),all));});
+    }
+    document.querySelectorAll('[data-building]').forEach(b=>b.addEventListener('click',()=>{
+      state.building=b.dataset.building;state.floor='all';state.search='';state.category='전체';search.value='';render();
+    }));
+    search.addEventListener('input',()=>{state.search=search.value;render();});
+    clearSearch.addEventListener('click',()=>{search.value='';state.search='';search.focus();render();});
+    document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!dialog.open){e.preventDefault();search.focus();}});
+    function setChip(text,primary=false){const c=element('span','modal-chip'+(primary?' primary':''),text);document.getElementById('modalLocation').append(c)}
+    function openBooth(x,fromHistory=false){
+      currentBooth=x;previousFocus=document.activeElement;
+      const loc=document.getElementById('modalLocation');loc.replaceChildren();
+      setChip('📍 '+x.building+(x.floor?' '+x.floor+'층':''),true);setChip(x.room);setChip(x.category);
+      document.getElementById('modalTitle').textContent=x.title;
+      document.getElementById('modalClubs').textContent='운영 동아리 · '+clubLabel(x);
+      document.getElementById('modalDescription').textContent=x.description;
+      const notes=document.getElementById('modalNotes');notes.replaceChildren();
+      if(Array.isArray(x.details)&&x.details.length){
+        const list=element('ul','modal-detail-list');
+        x.details.forEach(item=>list.append(element('li','',item)));
+        notes.append(list);
+      }
+      if(x.mapRoom){const n=element('div','modal-callout','🧭 교실배치도에는 「'+x.mapRoom+'」로 표기되어 있어요.');notes.append(n)}
+      if(x.sourceRoom&&x.sourceRoom!==x.room){const n=element('div','modal-callout','🧭 Canva 안내 자료에는 장소를 「'+x.sourceRoom+'」로 표시합니다. 교실배치도와 기존 부스 위치표의 「'+x.room+'」 표기를 우선 사용했어요.');notes.append(n)}
+      if(x.rainRoom){const n=element('div','modal-callout','☔ 비가 올 때는 '+x.rainBuilding+' '+x.rainFloor+'층 '+x.rainRoom+'에서 진행됩니다.');notes.append(n)}
+      if(!dialog.open)dialog.showModal();
+      if(!fromHistory){const url=new URL(window.location.href);url.searchParams.set('booth',x.id);history.replaceState(null,'',url);}
+    }
+    function closeBooth(){if(dialog.open)dialog.close()}
+    function onClose(){currentBooth=null;const url=new URL(window.location.href);if(url.searchParams.has('booth')){url.searchParams.delete('booth');history.replaceState(null,'',url)}if(previousFocus&&previousFocus.isConnected)previousFocus.focus()}
+    dialog.addEventListener('close',onClose);
+    dialog.addEventListener('click',e=>{if(e.target===dialog)closeBooth()});
+    document.getElementById('modalClose').addEventListener('click',closeBooth);
+    document.getElementById('modalDone').addEventListener('click',closeBooth);
+    function toast(text){const el=document.getElementById('toast');el.textContent=text;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2300)}
+    document.getElementById('modalShare').addEventListener('click',async()=>{
+      if(!currentBooth)return;
+      const url=new URL(window.location.href);url.searchParams.set('booth',currentBooth.id);
+      const title=currentBooth.title;
+      try{
+        if(navigator.share){await navigator.share({title:'송호고 어울림마당 | '+title,text:clubLabel(currentBooth)+' · '+currentBooth.room,url:url.href});return}
+        if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url.href);toast('부스 링크를 복사했어요!');return}
+        toast('게시 후에는 이 부스를 바로 공유할 수 있어요.');
+      }catch(e){if(e.name!=='AbortError')toast('공유하지 못했어요. 주소를 복사해 주세요.');}
+    });
+    renderStack();render();
+    const initial=new URL(window.location.href).searchParams.get('booth');
+    if(initial){const chosen=booths.find(x=>x.id===initial);if(chosen){state.building=chosen.building;state.floor=chosen.floor||'all';render();openBooth(chosen,true)}}
+  })();
+  </script>
+</body>
+</html>
